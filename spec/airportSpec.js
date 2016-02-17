@@ -42,10 +42,10 @@ describe("Airport", function() {
 
   describe ('airport', function() {
     it('can\'t accept when capacity is full', function() {
+      spyOn(window, 'alert');
+      airport.land(airplane);
       airport.land(airplane1);
-      expect(function() {
-        airport.land(airplane);
-      }).toThrow('Can\'t land');
+      expect(window.alert).toHaveBeenCalledWith('NOOOOOOOOOOO');
     });
   });
 });

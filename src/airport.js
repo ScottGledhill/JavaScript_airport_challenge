@@ -9,7 +9,7 @@ CAPACITY = 1;
 
 Airport.prototype.land = function(plane) {
   if (weather.isStormy()) throw 'Can\'t land';
-  if (this.planes.length >= CAPACITY) throw 'Can\'t land';
+  if (this.planes.length >= CAPACITY) alert('NOOOOOOOOOOO');
   this.flying = false;
   this.planes.push(plane);
 };
